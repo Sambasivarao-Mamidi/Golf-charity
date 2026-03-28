@@ -6,6 +6,7 @@
   "scripts": {
     "start": "node server.js",
     "dev": "node server.js",
+    "build": "cd client && npm run build",
     "seed:admin": "node seeds/adminSeed.js",
     "seed:charities": "node seeds/charitySeed.js",
     "seed:all": "node seeds/adminSeed.js && node seeds/charitySeed.js"
