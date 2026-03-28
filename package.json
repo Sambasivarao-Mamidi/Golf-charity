@@ -1,17 +1,31 @@
 {
-  "name": "golf-charity-platform",
+  "name": "golf-charity-server",
   "version": "1.0.0",
-  "private": true,
-  "description": "Golf Charity Subscription Platform",
-  "workspaces": [
-    "client",
-    "server"
-  ],
+  "description": "Golf Charity Subscription Platform Backend",
+  "main": "server.js",
   "scripts": {
-    "start": "cd server && npm start",
-    "install:all": "npm install --workspaces"
+    "start": "node server.js",
+    "dev": "node server.js",
+    "seed:admin": "node seeds/adminSeed.js",
+    "seed:charities": "node seeds/charitySeed.js",
+    "seed:all": "node seeds/adminSeed.js && node seeds/charitySeed.js"
   },
-  "engines": {
-    "node": ">=18.0.0"
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cloudinary": "^1.41.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-rate-limit": "^8.3.1",
+    "express-validator": "^7.3.1",
+    "express-xss-sanitizer": "^2.0.2",
+    "helmet": "^8.1.0",
+    "hpp": "^0.2.3",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.0.2",
+    "multer": "^2.1.1",
+    "multer-storage-cloudinary": "^4.0.0",
+    "nodemailer": "^8.0.4",
+    "stripe": "^14.8.0"
   }
 }
