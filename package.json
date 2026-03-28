@@ -1,0 +1,17 @@
+{
+  "name": "golf-charity-platform",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Golf Charity Subscription Platform",
+  "workspaces": [
+    "client",
+    "server"
+  ],
+  "scripts": {
+    "start": "cd server && npm start",
+    "install:all": "npm install --workspaces"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
