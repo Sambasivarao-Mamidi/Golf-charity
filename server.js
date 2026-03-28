@@ -39,7 +39,7 @@ app.use(hpp());
 
 const corsOptions = {
   origin: function (origin, callback) {
-    if (!origin) {
+    if (!origin || origin.includes('vercel.app') || origin.includes('localhost')) {
       return callback(null, true);
     }
     if (process.env.CLIENT_URL && origin === process.env.CLIENT_URL) {
